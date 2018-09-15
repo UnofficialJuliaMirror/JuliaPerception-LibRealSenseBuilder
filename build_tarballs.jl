@@ -60,7 +60,7 @@ products(prefix) = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    "https://github.com/Gnimuc/LibusbBuilder/releases/download/v1.0.22/build_libusb.v1.0.22.jl",
+    "https://github.com/JuliaPerception/LibusbBuilder/releases/download/v1.0.22-1/build_libusb.v1.0.22.jl",
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
