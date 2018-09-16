@@ -55,7 +55,7 @@ platforms = [
 
 # The products that we will ensure are always built
 products(prefix) = [
-    LibraryProduct(prefix, "librealsense2", :librealsense)
+    LibraryProduct(prefix, "librealsense2", :librealsense2)
 ]
 
 # Dependencies that must be installed before this package can be built
