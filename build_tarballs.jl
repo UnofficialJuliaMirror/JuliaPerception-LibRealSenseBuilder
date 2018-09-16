@@ -5,7 +5,7 @@ using BinaryBuilder
 name = "librealsense"
 version = v"2.16.0"
 
-# Collection of sources required to build libusb
+# Collection of sources required to build librealsense
 sources = [
     "https://github.com/IntelRealSense/librealsense.git" =>
     "b55069d177f69daea3b9437532f4b98fbe97a718",
@@ -37,7 +37,7 @@ CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_CV_EXAMPLES=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_PCL_EXAMPLES=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_WITH_TM2=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_WITH_STATIC_CRT=true"
-cmake ${CMAKE_FLAGS} -DCMAKE_SYSTEM_VERSION="" ..
+cmake ${CMAKE_FLAGS} -DCMAKE_SYSTEM_VERSION=0 ..
 make -j${nproc}
 make install
 
@@ -60,7 +60,7 @@ products(prefix) = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    "https://github.com/JuliaPerception/LibusbBuilder/releases/download/v1.0.22-1/build_libusb.v1.0.22.jl",
+    "https://github.com/JuliaPerception/LibusbBuilder/releases/download/v1.0.22-1/build_libusb.v1.0.22.jl"
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
