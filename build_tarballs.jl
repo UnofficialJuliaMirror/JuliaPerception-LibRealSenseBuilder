@@ -3,12 +3,12 @@
 using BinaryBuilder
 
 name = "librealsense"
-version = v"2.15.0"
+version = v"2.16.0"
 
 # Collection of sources required to build libusb
 sources = [
     "https://github.com/IntelRealSense/librealsense.git" =>
-    "1e8aa8002bc3d6afbfc7b733ea4a19864bbeca14",
+    "b55069d177f69daea3b9437532f4b98fbe97a718",
 
 ]
 
@@ -37,7 +37,7 @@ CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_CV_EXAMPLES=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_PCL_EXAMPLES=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_WITH_TM2=false"
 CMAKE_FLAGS="${CMAKE_FLAGS} -DBUILD_WITH_STATIC_CRT=true"
-cmake ${CMAKE_FLAGS} ..
+cmake ${CMAKE_FLAGS} -DCMAKE_SYSTEM_VERSION="" ..
 make -j${nproc}
 make install
 
@@ -55,7 +55,7 @@ platforms = [
 
 # The products that we will ensure are always built
 products(prefix) = [
-    LibraryProduct(prefix, "librealsense", :librealsense)
+    LibraryProduct(prefix, "librealsense2", :librealsense)
 ]
 
 # Dependencies that must be installed before this package can be built
